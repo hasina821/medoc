@@ -1,0 +1,59 @@
+import { useState } from 'react';
+import Filtre from '../components/cards/Filtre';
+import { HiPlusCircle } from 'react-icons/hi'
+import { BsCardList } from "react-icons/bs";
+import { CiBoxList } from "react-icons/ci";
+import AddMedoc from '../components/create/AddMedoc';
+import TableEntre from '../components/Table/TableEntre';
+import { entreData } from '../../Data/Medocs';
+import PrescriPourcentage from '../components/cards/PrescriPourcentage';
+import EntreCardAll from '../components/cardItem/EntreCardAll';
+import { GiErlenmeyer } from "react-icons/gi";
+import AddNEWMedoc from '../components/create/AddNewMedoc';
+
+
+function Entre() {
+  const [showList,setShowList]=useState(false)
+  const [openModal,setOpenModal]=useState(false)
+  const [openModalNEW,setOpenModalNEW]=useState(false)
+  return (
+    <>
+        <AddNEWMedoc modalOpen={openModalNEW} setModalOpen={setOpenModalNEW}/>
+        <AddMedoc modalOpen={openModal} setModalOpen={setOpenModal}/>
+        <div className='flex gap-2 items-center'>
+            <BsCardList className='text-subMain'/> <span className='font-light text-subMain text-[12px]'>Liste des médicaments entrées</span>
+        </div>
+        <div className='gap-2 min-h-[400px] grid grid-cols-12 mt-2'>
+          <div className='col-span-9  rounded-xl'>
+            <div className='flex justify-between gap-2'>
+              <Filtre/>
+              <div className='flex gap-8 items-center'>
+                <CiBoxList className='text-subMain text-[32px] font-bold cursor-pointer hover:bg-dry hover:text-white hover:rounded-md' onClick={()=>setShowList(!showList)}/>
+                <button onClick={()=>setOpenModal(true)} className='bg-subMain flex-rows gap-4 font-medium transitions hover:bg-purple border border-subMain hover:border-purple text-white py-1 px-4 rounded flex items-center'>
+                      <HiPlusCircle/> Acheter
+                  </button>
+              </div>
+              <div className='flex gap-8 items-center'>
+                <button onClick={()=>setOpenModalNEW(true)} className='bg-subMain flex-rows gap-4 font-medium transitions hover:bg-purple border border-subMain hover:border-purple text-white py-1 px-4 rounded flex items-center'>
+                      <GiErlenmeyer/> Nouveau
+                  </button>
+              </div>
+            </div>
+            {showList ? 
+            <div className="mt-2">
+              <TableEntre data={entreData} admin={true}/>
+            </div> : 
+            <div className='grid grid-cols-8 gap-4'>
+              <EntreCardAll/>
+            </div>
+          }
+          </div>
+          <div className='col-span-3 bg-[#95afc0] rounded-xl'>
+            <PrescriPourcentage/>
+          </div>
+        </div>
+    </>
+  );
+}
+
+export default Entre;

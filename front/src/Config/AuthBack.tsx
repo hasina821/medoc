@@ -1,0 +1,1 @@
+export const backendURL = "https://backend.zamandresyprod.mg/api"

@@ -1,0 +1,7 @@
+GET http://localhost:3000/api/medicament/all
+Content-Type: application/json
+
+{
+    "id_MedocIn":7,
+    "quantite":250
+}

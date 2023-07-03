@@ -1,0 +1,80 @@
+export const Movies = [
+    {
+        name:"Kakajoh",
+        desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        titleImage:"1.jpg",
+        image:"affiche.jpg",
+        category:"Starvan",
+        language:"English",
+        year:"2022",
+        time:"3hr",
+        video:"",
+        rate:"3.4",
+        reviews:23
+    },
+    {
+        name:"Rija tahiana",
+        desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        titleImage:"4.jpg",
+        image:"affiche2.jpg",
+        category:"Starvan",
+        language:"English",
+        year:"2022",
+        time:"3hr",
+        video:"",
+        rate:"3.4",  
+        reviews:23
+    },
+    {
+        name:"Oladad",
+        desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        titleImage:"2.png",
+        image:"affiche3.jpg",
+        category:"Starvan",
+        language:"English",
+        year:"2022",
+        time:"3hr",
+        video:"",
+        rate:"3.4",
+        reviews:23
+    },
+    {
+        name:"Poopy",
+        desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        titleImage:"3.jpg",
+        image:"affiche4.jpg",
+        category:"Starvan",
+        language:"English",
+        year:"2022",
+        time:"3hr",
+        video:"",
+        rate:"3.4",
+        reviews:23
+    },
+    {
+        name:"Serge Jovial",
+        desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        titleImage:"5.jpg",
+        image:"affiche5.jpg",
+        category:"Starvan",
+        language:"English",
+        year:"2022",
+        time:"3hr",
+        video:"",
+        rate:"3.4",
+        reviews:23
+    },
+    {
+        name:"Haddad Toni",
+        desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        titleImage:"6.jpg",
+        image:"affiche7.jpg",
+        category:"Starvan",
+        language:"English",
+        year:"2022",
+        time:"3hr",
+        video:"",
+        rate:"3.4",
+        reviews:23
+    }
+]
